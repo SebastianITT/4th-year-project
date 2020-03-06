@@ -43,6 +43,11 @@ namespace TuningCarParts
                  .AddDefaultUI()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddSingleton<IEmailSender, EmailSender>();
+            services.AddAuthentication().AddFacebook(fb =>
+            {
+                fb.AppId = "207656610428609";
+                fb.AppSecret = "3be929d08cd03b36b6469b200ad67da3";
+            });
             services.Configure<EmailOptions>(Configuration);
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();

@@ -243,9 +243,6 @@ namespace TuningCarParts.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserID")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -257,6 +254,91 @@ namespace TuningCarParts.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Car");
+                });
+
+            modelBuilder.Entity("TuningCarParts.Model.ServiceDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ServiceHeader")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ServiceHeaderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ServiceName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ServicePrice")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ServiceTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ServiceHeaderId");
+
+                    b.HasIndex("ServiceTypeId");
+
+                    b.ToTable("ServiceDetails");
+                });
+
+            modelBuilder.Entity("TuningCarParts.Model.ServiceHeader", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Miles")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
+                    b.Property<int>("carId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.ToTable("ServiceHeader");
+                });
+
+            modelBuilder.Entity("TuningCarParts.Model.ServiceShopping", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("ServiceTypeId");
+
+                    b.ToTable("ServiceShopping");
                 });
 
             modelBuilder.Entity("TuningCarParts.Model.ServiceType", b =>
@@ -356,6 +438,41 @@ namespace TuningCarParts.Data.Migrations
                     b.HasOne("TuningCarParts.Model.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("TuningCarParts.Model.ServiceDetails", b =>
+                {
+                    b.HasOne("TuningCarParts.Model.ServiceHeader", "ServerHeader")
+                        .WithMany()
+                        .HasForeignKey("ServiceHeaderId");
+
+                    b.HasOne("TuningCarParts.Model.ServiceType", "ServiceType")
+                        .WithMany()
+                        .HasForeignKey("ServiceTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TuningCarParts.Model.ServiceHeader", b =>
+                {
+                    b.HasOne("TuningCarParts.Model.Car", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId");
+                });
+
+            modelBuilder.Entity("TuningCarParts.Model.ServiceShopping", b =>
+                {
+                    b.HasOne("TuningCarParts.Model.Car", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TuningCarParts.Model.ServiceType", "ServiceType")
+                        .WithMany()
+                        .HasForeignKey("ServiceTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

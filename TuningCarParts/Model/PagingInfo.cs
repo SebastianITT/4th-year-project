@@ -12,6 +12,6 @@ namespace TuningCarParts.Model
         public int CurrentPage { get; set; }
         public int TotalPage => (int)Math.Ceiling((decimal)TotalItems / ItemsPerPage);
 
-        public string urlParam { get; set; }
+        public string UrlParam { get; set; }
     }
 }

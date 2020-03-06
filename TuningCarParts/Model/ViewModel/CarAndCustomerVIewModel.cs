@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace TuningCarParts.Model.ViewModel
 {
-    public class CarAndCustomerVIewModel
+    public class CarAndCustomerViewModel
     {
-        public ApplicationUser userObj { get; set; }
-        public int MyProperty { get; set; }
+        public ApplicationUser UserObj { get; set; }
+        public IEnumerable<Car> Cars { get; set; }
 
     }
 }

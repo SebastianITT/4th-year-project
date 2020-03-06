@@ -75,7 +75,7 @@ namespace TuningCarParts.Pages.Users
                 CurrentPage = productPage,
                 ItemsPerPage =SD.PaginationUserPage,
                 TotalItems = count,
-                urlParam = param.ToString()
+                UrlParam = param.ToString()
         };
             UserListVM.ApplicationUserList = UserListVM.ApplicationUserList.OrderBy(p => p.Email)
                 .Skip((productPage - 1) * SD.PaginationUserPage)

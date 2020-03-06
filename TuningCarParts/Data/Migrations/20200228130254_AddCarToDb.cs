@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TuningCarParts.Data.Migrations
 {
@@ -6,18 +7,47 @@ namespace TuningCarParts.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterColumn<string>(
+                name: "Name",
+                table: "AspNetUserTokens",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldMaxLength: 128);
+
+            migrationBuilder.AlterColumn<string>(
+                name: "LoginProvider",
+                table: "AspNetUserTokens",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldMaxLength: 128);
+
+            migrationBuilder.AlterColumn<string>(
+                name: "ProviderKey",
+                table: "AspNetUserLogins",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldMaxLength: 128);
+
+            migrationBuilder.AlterColumn<string>(
+                name: "LoginProvider",
+                table: "AspNetUserLogins",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldMaxLength: 128);
+
             migrationBuilder.CreateTable(
                 name: "Car",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    VIN = table.Column<string>(nullable: false),
                     Make = table.Column<string>(nullable: false),
                     Model = table.Column<string>(nullable: false),
+                   
                     Year = table.Column<int>(nullable: false),
                     Miles = table.Column<double>(nullable: false),
-                    Color = table.Column<string>(nullable: false),
-                    UserID = table.Column<string>(nullable: true),
+                    Color = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -41,6 +71,34 @@ namespace TuningCarParts.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Car");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Name",
+                table: "AspNetUserTokens",
+                maxLength: 128,
+                nullable: false,
+                oldClrType: typeof(string));
+
+            migrationBuilder.AlterColumn<string>(
+                name: "LoginProvider",
+                table: "AspNetUserTokens",
+                maxLength: 128,
+                nullable: false,
+                oldClrType: typeof(string));
+
+            migrationBuilder.AlterColumn<string>(
+                name: "ProviderKey",
+                table: "AspNetUserLogins",
+                maxLength: 128,
+                nullable: false,
+                oldClrType: typeof(string));
+
+            migrationBuilder.AlterColumn<string>(
+                name: "LoginProvider",
+                table: "AspNetUserLogins",
+                maxLength: 128,
+                nullable: false,
+                oldClrType: typeof(string));
         }
     }
 }

@@ -481,3 +481,13 @@ C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1
 C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Users\Edit.cshtml.g.cs
 C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\bin\Debug\netcoreapp3.1\SendGrid.dll
 C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\VerifyEmail.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\TuningCarParts.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\TuningCarParts.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Cars\Index.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Cars\Create.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Cars\Delete.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Cars\Edit.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Services\Create.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Services\Details.cshtml.g.cs
+C:\Users\sebi\source\repos\TuningCarParts\TuningCarParts\obj\Debug\netcoreapp3.1\Razor\Pages\Services\History.cshtml.g.cs

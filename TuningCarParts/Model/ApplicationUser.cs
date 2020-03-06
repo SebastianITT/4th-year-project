@@ -13,6 +13,6 @@ namespace TuningCarParts.Model
         public string City{ get; set; }
         public string EirCode { get; set; }
 
-        public string urlParam { get; set; }
+        public string UrlParam { get; set; }
     }
 }
