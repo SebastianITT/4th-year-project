@@ -23,11 +23,11 @@ namespace TuningCarParts.Pages.Users
             _db = db;
         }
         [BindProperty]
-        public UserListViewModel UserListVM { get; set; }
+        public UserListViewModel UsersListVM { get; set; }
 
         public async Task<IActionResult> OnGet(int productPage = 1, string searchEmail = null, string searchName = null, string searchPhone = null)
         {
-            UserListVM = new UserListViewModel()
+            UsersListVM = new UserListViewModel()
             {
                 ApplicationUserList = await _db.ApplicationUser.ToListAsync()
             };
@@ -50,34 +50,34 @@ namespace TuningCarParts.Pages.Users
             }
             if (searchEmail != null)
             {
-                UserListVM.ApplicationUserList = await _db.ApplicationUser.Where(u => u.Email.ToLower().Contains(searchEmail.ToLower())).ToListAsync();
+                UsersListVM.ApplicationUserList = await _db.ApplicationUser.Where(u => u.Email.ToLower().Contains(searchEmail.ToLower())).ToListAsync();
             }
             else
             {
                 if (searchName != null)
                 {
-                    UserListVM.ApplicationUserList = await _db.ApplicationUser.Where(u => u.Name.ToLower().Contains(searchName.ToLower())).ToListAsync();
+                    UsersListVM.ApplicationUserList = await _db.ApplicationUser.Where(u => u.Name.ToLower().Contains(searchName.ToLower())).ToListAsync();
                 }
                 else
                 {
                     if (searchPhone != null)
                     {
-                        UserListVM.ApplicationUserList = await _db.ApplicationUser.Where(u => u.PhoneNumber.ToLower().Contains(searchPhone.ToLower())).ToListAsync();
+                        UsersListVM.ApplicationUserList = await _db.ApplicationUser.Where(u => u.PhoneNumber.ToLower().Contains(searchPhone.ToLower())).ToListAsync();
                     }
                 }
             }
 
 
 
-            var count = UserListVM.ApplicationUserList.Count;
-            UserListVM.PagingInfo = new PagingInfo
+            var count = UsersListVM.ApplicationUserList.Count;
+            UsersListVM.PagingInfo = new PagingInfo
             {
                 CurrentPage = productPage,
                 ItemsPerPage =SD.PaginationUserPage,
                 TotalItems = count,
                 UrlParam = param.ToString()
         };
-            UserListVM.ApplicationUserList = UserListVM.ApplicationUserList.OrderBy(p => p.Email)
+            UsersListVM.ApplicationUserList = UsersListVM.ApplicationUserList.OrderBy(p => p.Email)
                 .Skip((productPage - 1) * SD.PaginationUserPage)
                 .Take(SD.PaginationUserPage).ToList();
 

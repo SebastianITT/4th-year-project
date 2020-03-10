@@ -11,5 +11,6 @@
     <_SelectedScaffolderID>IdentityScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Identity</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_DbContextTypeFullName>TuningCarParts.Data.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
+    <NameOfLastUsedPublishProfile>TuningCarParts20200309090438 - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

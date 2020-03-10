@@ -1,5 +1,5 @@
 ﻿@page
-@model TuningCarParts.EditModel
+@model TuningCarParts.Pages.ServiceTypes.EditModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -7,11 +7,11 @@
 }
 
 <br />
-<h2 class="text-info">Edit Service </h2>
+<h2 class="text-info">Edit Service Type</h2>
 <br />
 <form method="post">
     <div class="border backgroundWhite">
-        <input type="hidden" asp-for="ServiceType.Id"/>
+        <input type="hidden" asp-for="ServiceType.Id" />
         <div class="form-group row">
             <div class="col-2">
                 <label asp-for="ServiceType.Name"></label>
@@ -32,11 +32,9 @@
         </div>
         <div class="form-group row">
             <div class="col-5 offset-2">
-                <partial name="EditAndBackToList" />
+                <partial name="_EditAndBackToListButton" />
             </div>
         </div>
-
-
     </div>
 </form>
 
@@ -44,3 +42,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

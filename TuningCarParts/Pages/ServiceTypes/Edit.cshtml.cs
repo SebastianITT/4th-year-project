@@ -11,15 +11,15 @@ using TuningCarParts.Data;
 using TuningCarParts.Model;
 using TuningCarParts.Utility;
 
-namespace TuningCarParts
+namespace TuningCarParts.Pages.ServiceTypes
 {
-   
+
+    [Authorize(Roles = SD.AdminEndUser)]
     public class EditModel : PageModel
     {
-       
-        private readonly TuningCarParts.Data.ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
 
-        public EditModel(TuningCarParts.Data.ApplicationDbContext db)
+        public EditModel(ApplicationDbContext db)
         {
             _db = db;
         }
@@ -43,8 +43,6 @@ namespace TuningCarParts
             return Page();
         }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -60,6 +58,6 @@ namespace TuningCarParts
             return RedirectToPage("./Index");
         }
 
-       
+
     }
 }

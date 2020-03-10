@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3eS653lwVk6yMSQrxmQXJQAAAAACAAAAAAAQZgAAAAEAACAAAAC4gAF+ELyJNGdCLGxMkYyxMU6pxRPWXalTg423jl5Y+AAAAAAOgAAAAAIAACAAAADTmlhyIKJruLhMWS+/pi3KEYeo+aJQ/VyMb2piW6t3E4AAAADPtAY+agZBt5QnJ7p/okQolxjDux3wThUTGOWJmWl8qW6pFoXKi/PTFqs00lG89fLsMaWokYhEAskyUKvb/veb3prKG8b/3NzcxrFNvf2GWDdc71OwOGQU5sv2CzJXa2BYVlepWUgnkpwlGqaBjfQgVfChAvalyagpKpLVrVCvs0AAAADvkszyTJVStGgUH9K0pE0qRBStT8bPkt5vrCVQGz7iUu5TCisWgWyhbFlxWEeQ6KM94wVm/oyWl8UCVZFi2FoT</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:tuningcarparts20200309090438dbserver.database.windows.net,1433%3bInitial Catalog=TuningCarParts20200309090438_db%3bUser Id=adminuser%40tuningcarparts20200309090438dbserver%3bPassword=Qazedcwsx1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

@@ -10,7 +10,7 @@ using TuningCarParts.Data;
 using TuningCarParts.Model;
 using TuningCarParts.Utility;
 
-namespace TuningCarParts
+namespace TuningCarParts.Pages.ServiceTypes
 {
     
     public class IndexModel : PageModel
