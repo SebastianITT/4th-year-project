@@ -13,7 +13,7 @@ using TuningCarParts.Utility;
 namespace TuningCarParts.Pages.ServiceTypes
 {
 
-    [Authorize(Roles = SD.AdminEndUser)]
+   
     public class CreateModel : PageModel
     {
         private readonly ApplicationDbContext _db;

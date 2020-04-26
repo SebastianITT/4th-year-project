@@ -12,7 +12,7 @@ using TuningCarParts.Utility;
 
 namespace TuningCarParts.Pages.ServiceTypes
 {
-    [Authorize(Roles = SD.AdminEndUser)]
+   
     public class DeleteModel : PageModel
     {
 

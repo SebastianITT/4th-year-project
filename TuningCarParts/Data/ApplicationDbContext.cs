@@ -19,6 +19,7 @@ namespace TuningCarParts.Data
         public DbSet<ServiceShopping> ServiceShopping { get; set; }
         public DbSet<ServiceHeader> ServiceHeader { get; set; }
         public DbSet<ServiceDetails> ServiceDetails { get; set; }
+       public DbSet<Parts> Parts { get; set; }
 
 
 

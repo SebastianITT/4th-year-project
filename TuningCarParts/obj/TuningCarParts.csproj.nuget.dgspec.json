@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sebi\\source\\repos\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj": {}
+    "C:\\Users\\sebi\\source\\repos\\project\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sebi\\source\\repos\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj": {
+    "C:\\Users\\sebi\\source\\repos\\project\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sebi\\source\\repos\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj",
+        "projectUniqueName": "C:\\Users\\sebi\\source\\repos\\project\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj",
         "projectName": "TuningCarParts",
-        "projectPath": "C:\\Users\\sebi\\source\\repos\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj",
+        "projectPath": "C:\\Users\\sebi\\source\\repos\\project\\TuningCarParts\\TuningCarParts\\TuningCarParts.csproj",
         "packagesPath": "C:\\Users\\sebi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sebi\\source\\repos\\TuningCarParts\\TuningCarParts\\obj\\",
+        "outputPath": "C:\\Users\\sebi\\source\\repos\\project\\TuningCarParts\\TuningCarParts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

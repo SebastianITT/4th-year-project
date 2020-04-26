@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace TuningCarParts.Pages.ServiceTypes
 {
 
-    [Authorize(Roles = SD.AdminEndUser)]
+   
     public class DetailsModel : PageModel
     {
         private readonly ApplicationDbContext _db;
